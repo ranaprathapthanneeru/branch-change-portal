@@ -1,0 +1,12 @@
+a:
+   The final allocation will happen in the second iteration of merit list
+
+b:
+   All will be allocated in the first iteration
+
+c:
+   All equal cpis
+
+d:
+   Ineligible cpis and all cases of equal cpis like
+   upper student has cpi,say 8,but was not alloted CS(say) due to 0.75 factor but his lower one with same cpi 8.0 can be alloted CS bcoz 0.75 factor doesnt affect him and so on.
