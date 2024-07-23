@@ -1,0 +1,104 @@
+ADMIN:::
+
+1)In admin you can import and export data into various models
+
+ 
+===============================================================================
+
+LOGIN PAGE:::
+All of these come under error checking and features
+
+1) RollNo field accepts only roll numbers starting with 15 and containing 9 digits. 
+   Also ROllNo should be like 1500a00bc, where a,b,c are numbers from 0 to 9
+
+   TestCases:
+      – Enter roll number which is not like 1500a00bc
+      - Enter roll no not starting from 15 or not of 9 digits
+   Behavior: The UI shows a notification about invalidity of the roll number to the user after clicking login button
+
+2)The password field takes the passsword without displaying it, displayed as ******, you can login only with valid password
+
+   TestCases:
+      – Enter any password of your choice 
+   Behavior: The UI shows your password as ******
+      -Enter password other than 'password' and try submitting
+   Behavior: The UI shows your Invalid Password
+
+3)Does not accept empty fields in login page
+    
+    TestCases:
+      – Leave any of the choice blank 
+    Behavior: The UI shows 'This field is required' above the field
+
+4)You can see inner roll no in ROLL NO field and inner password in PASSWORD field
+
+      - you can see it directly
+
+===================================================================================
+
+BRANCH CHANGE PAGE:
+
+5) After logging in succesfully, RollNo ,corresponding cpi, category, current branch  are displayed automatically.
+
+     TestCases:
+      – Login with valid roll no and password
+    Behavior: The UI shows corresponding fields filled
+
+6) some of the preferences or all of them  can be left blank if user wants.
+
+     TestCases:
+      – fill the name ,do not fill any preferences and submit
+    Behavior: The UI shows takes the input and displays "You have submitted your response"
+
+7) If the automatically displayed RollNo and other fields are altered, user can't submit and error message is displayed.
+
+     TestCases:
+      – alter one or many of the automatically displayed fields
+    Behavior: The UI shows same page and displays "Cannot alter personal details"
+
+8) List of preferences is displayed on going to preferences
+
+       --try clicking on preferences
+
+9) User can update his preferences by logging in again before deadline 
+
+     TestCases:
+      – submit one form of a particular roll no and again login and submit once more by altering preferences
+        you can check the update via admin
+    Behavior: The UI shows takes the input and displays "You have submitted your response"
+
+10) Warning message is displayed for students of ineligible cpi
+
+     TestCases:
+      – try different roll no's you can find warning at some students
+    Behavior: The UI comes to branch change form after logging in and displays "You are ineligible"
+      even then if submitted it accepts the form
+
+       --try submitting one such 
+
+11) You can logout if you dont want to submit
+
+     TestCases:
+      – fill or dont fill the form click logout button
+    Behavior: The UI  displays "You have logged out"
+    
+
+12) Once successfully submitted(clicked submit button and no errors displayed) or pressed logout, user is automatically logged out.
+     cant acess unless logged in
+
+     TestCases:
+      – submit the form and press back button 
+    Behavior: The UI  displays "Cannot record response Please login"
+
+13) The results are displayed in the results page
+
+    TestCases:
+      – go for home url/results
+    Behavior: results are displayed
+
+
+
+
+
+
+
